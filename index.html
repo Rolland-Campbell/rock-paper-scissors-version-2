@@ -6,18 +6,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Rock Paper Scissors (take 2)</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
 
 <body>
   <div class="container">
     <div class="row">
-      <div class="col">
-        <button onclick="pickRock()">Rock</button>
+      <div class="col text-center">
+        <h1>ROCK, PAPER, SCISSORS DEATHMATCH!</h1>
       </div>
     </div>
     <div class="row">
-      <div class="col">
-        <h2>Who will WIN</h2>
+      <div class="col text-center">
+        <button onclick="pickRock()">Rock</button>
+        <button onclick="pickPaper()">Paper</button>
+        <button onclick="pickScissors()">Scissors</button>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col text-center">
+        <h2 id="game-results">Who will WIN</h2>
       </div>
     </div>
   </div>

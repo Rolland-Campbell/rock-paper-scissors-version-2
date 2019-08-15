@@ -32,33 +32,45 @@ function pickScissors() {
   compare(playerPick, compChoice);
 }
 
-let gameOutcome = document.getElementsByTagName("<h2>")
+//let gameOutcome = document.getElementsByTagName("<h2>")
+let gameResult = document.getElementById("game-results")
 
 function compare(playerPick, computerPick) {
   //console.log(playerPick, computerPick); -getting both picks
   if (playerPick == "rock") {
-    if (computerPick == "rock") {
-      return console.log("It is a TIE!")
-      //return gameOutcome.innerHTML = "Hello World!"
-      //textContent = "It is a TIE!"
+    if (computerPick == "paper") {
+      gameResult.textContent = "Your opponent chose: " + computerPick + " You LOSE!"
+      return console.log(computerPick, "You LOSE!")
+    } else if (computerPick == "scissors") {
+      gameResult.textContent = "Your opponent chose: " + computerPick + " You Win!"
+      return console.log(computerPick, "You WIN!")
+    } else {
+      gameResult.textContent = "Your opponent chose: " + computerPick + " It is a TIE!"
+      return console.log(computerPick, "It is a TIE!")
     }
   }
   if (playerPick == "paper") {
     if (computerPick == "rock") {
-      return console.log("You LOSE!")
-      //return gameOutcome.textContent = "You LOSE!"
+      gameResult.textContent = "Your opponent chose: " + computerPick + " You WIN!"
+      return console.log(computerPick, "You WIN!")
+    } else if (computerPick == "scissors") {
+      gameResult.textContent = "Your opponent chose: " + computerPick + " You LOSE!"
+      return console.log(computerPick, "You LOSE!")
     } else {
-      return console.log("You WIN!")
-      //return gameOutcome.textContent = "You WIN!"
+      gameResult.textContent = "Your opponent chose: " + computerPick + " It is a TIE!"
+      return console.log(computerPick, "It is a TIE!")
     }
   }
   if (playerPick == "scissors") {
     if (computerPick == "paper") {
-      return console.log("You WIN!")
-      //return gameOutcome.textContent = "You WIN!"
+      gameResult.textContent = "Your opponent chose: " + computerPick + " You WIN!"
+      return console.log(computerPick, "You WIN!")
+    } else if (computerPick == "rock") {
+      gameResult.textContent = "Your opponent chose: " + computerPick + " You LOSE!"
+      return console.log(computerPick, "You LOSE!")
     } else {
-      return console.log("You LOSE!")
-      //return gameOutcome.textContent = "You LOSE!"
+      gameResult.textContent = "Your opponent chose: " + computerPick + " It is a TIE!"
+      return console.log(computerPick, "It is a TIE!")
     }
   }
 }
