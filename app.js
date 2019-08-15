@@ -11,33 +11,54 @@ function computerChoose() {
   }
 }
 
-//not sure what to do here. I am still pretty hazy on this
 function pickRock() {
   compChoice = computerChoose();
+  //console.log(compChoice); -getting compChoice just fine
   playerPick = "rock";
   compare(playerPick, compChoice);
 }
 
-let gameOutcome = document.querySelector("Who will WIN")
+function pickPaper() {
+  compChoice = computerChoose();
+  //console.log(compChoice); -getting compChoice just fine
+  playerPick = "paper";
+  compare(playerPick, compChoice);
+}
+
+function pickScissors() {
+  compChoice = computerChoose();
+  //console.log(compChoice); -getting compChoice just fine
+  playerPick = "scissors";
+  compare(playerPick, compChoice);
+}
+
+let gameOutcome = document.getElementsByTagName("<h2>")
 
 function compare(playerPick, computerPick) {
+  //console.log(playerPick, computerPick); -getting both picks
   if (playerPick == "rock") {
     if (computerPick == "rock") {
-      return gameOutcome.textContent = "It is a TIE!"
+      return console.log("It is a TIE!")
+      //return gameOutcome.innerHTML = "Hello World!"
+      //textContent = "It is a TIE!"
     }
   }
   if (playerPick == "paper") {
     if (computerPick == "rock") {
-      return gameOutcome.textContent = "You LOSE!"
+      return console.log("You LOSE!")
+      //return gameOutcome.textContent = "You LOSE!"
     } else {
-      return gameOutcome.textContent = "You WIN!"
+      return console.log("You WIN!")
+      //return gameOutcome.textContent = "You WIN!"
     }
   }
   if (playerPick == "scissors") {
     if (computerPick == "paper") {
-      return gameOutcome.textContent = "You WIN!"
+      return console.log("You WIN!")
+      //return gameOutcome.textContent = "You WIN!"
     } else {
-      return gameOutcome.textContent = "You LOSE!"
+      return console.log("You LOSE!")
+      //return gameOutcome.textContent = "You LOSE!"
     }
   }
 }
