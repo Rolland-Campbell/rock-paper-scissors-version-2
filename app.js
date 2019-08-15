@@ -11,8 +11,11 @@ function computerChoose() {
   }
 }
 
+//not sure what to do here. I am still pretty hazy on this
 function pickRock() {
+  computerChoose();
   playerPick = "rock";
+  compare();
 }
 
 let gameOutcome = document.querySelector("Who will WIN")
